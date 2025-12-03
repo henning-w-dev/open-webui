@@ -566,7 +566,7 @@
 
 {#if !$mobile && !$showSidebar}
 	<div
-		class=" pt-[7px] pb-2 px-2 flex flex-col justify-between text-black dark:text-white hover:bg-gray-50/30 dark:hover:bg-gray-950/30 h-full z-10 transition-all border-e-[0.5px] border-gray-50 dark:border-gray-850/30"
+		class="pt-[7px] pb-2 px-1.5 flex flex-col justify-between text-black dark:text-white h-full z-10 transition-all border-e-[0.5px] border-[var(--sidebar)] dark:border-gray-850 bg-[var(--sidebar)] dark:bg-gray-950"
 		id="sidebar"
 	>
 		<button
@@ -760,7 +760,7 @@
 		bind:this={navElement}
 		id="sidebar"
 		class="h-screen max-h-[100dvh] min-h-screen select-none {$showSidebar
-			? `${$mobile ? 'bg-gray-50 dark:bg-gray-950' : 'bg-gray-50/70 dark:bg-gray-950/70'} z-50`
+			? `${$mobile ? 'bg-gray-50 dark:bg-gray-950' : 'bg-[var(--sidebar)] dark:bg-gray-950/70'} z-50`
 			: ' bg-transparent z-0 '} {$isApp
 			? `ml-[4.5rem] md:ml-0 `
 			: ' transition-all duration-300 '} shrink-0 text-gray-900 dark:text-gray-200 text-sm fixed top-0 left-0 overflow-x-hidden
@@ -1266,10 +1266,14 @@
 					</div>
 				</Folder>
 			</div>
+			<!-- Environment Detail Box -->
+			<div class="mb-2 px-2 py-3 mb-8 mx-2 rounded-lg bg-gray-100 dark:bg-gray-900 text-xs text-gray-700 dark:text-gray-300 font-medium border border-gray-200 dark:border-gray-800">
+				Environment: Local Test
+			</div>
 
 			<div class="px-1.5 pt-1.5 pb-2 sticky bottom-0 z-10 -mt-3 sidebar">
 				<div
-					class=" sidebar-bg-gradient-to-t bg-linear-to-t from-gray-50 dark:from-gray-950 to-transparent from-50% pointer-events-none absolute inset-0 -z-10 -mt-6"
+					class="sidebar-bg-gradient-to-t bg-linear-to-t from-[var(--profile-menu)] dark:from-gray-950 to-transparent from-50% pointer-events-none absolute inset-0 -z-10 -mt-6"
 				></div>
 				<div class="flex flex-col font-primary">
 					{#if $user !== undefined && $user !== null}

@@ -33,6 +33,10 @@
 /* --app-text-scale is updated via the UI Scale slider (Interface.svelte) */
 :root {
 	--app-text-scale: 1;
+	--sidebar: #ccdaff;
+	--header: #ccdaff;
+	--profile-menu: #ccdaff;
+	--background: #e6edff;
 }
 
 html {
@@ -637,7 +641,7 @@ input[type='number'] {
 
 .tiptap th,
 .tiptap td {
-	@apply px-3 py-1.5 border border-gray-100/30 dark:border-gray-850/30;
+	@apply px-3 py-1.5 border border-gray-100 dark:border-gray-850;
 }
 
 .tiptap th {
