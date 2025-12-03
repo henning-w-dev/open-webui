@@ -1,4 +1,4 @@
-# **Part B: RAG Answer Quality & Customer Safety
+# Part B: RAG Answer Quality & Customer Safety
 
 ## **1. System Prompt**
 
